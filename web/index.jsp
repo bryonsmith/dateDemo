@@ -16,8 +16,12 @@
     <%
 
         Date today = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat ("dd-MM-yyyy");
+        
+        SimpleDateFormat dateFormat = new SimpleDateFormat ("MM/dd/yyyy");
         String ddMMyyyyToday = dateFormat.format(today);
+        
+        SimpleDateFormat dateFormatUS = new SimpleDateFormat ("dd-MM-yyyy");
+        String MMddyyyyToday = dateFormatUS.format(today);
 
     %>
 
@@ -28,6 +32,7 @@
         <h1>Hello World!</h1>
         <p> Today is: <%= today%>
         <p> Today is: <%= ddMMyyyyToday %>
+        <p> Today is: <%= MMddyyyyToday %>
 
     </body>
 </html>
